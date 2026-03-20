@@ -5,12 +5,12 @@ Plataforma web para generar, administrar y responder exámenes de forma dinámic
 ---
 
 ## Tecnologías
-
-- **Backend:** Node.js + Express
-- **Base de datos:** SQLite
+ 
+- **Backend:** Next.js (App Router)
+- **Base de datos:** SQLite (via Prisma)
 - **IA:** Google Gemini API (generación de preguntas)
 - **Autenticación:** JWT
-- **Frontend:** HTML + CSS + JavaScript
+- **Frontend:** Next.js + Tailwind CSS
 - **Pruebas:** Playwright
 
 ---
