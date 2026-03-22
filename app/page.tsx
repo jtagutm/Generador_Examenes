@@ -71,7 +71,7 @@ export default function Home() {
       </div>
 
       {ultimoExamen ? (
-        <div style={{ background: "#f8f9fa", border: "1px solid #dee2e6", borderRadius: 4, padding: 12, marginBottom: 16 }}>
+        <div style={{  border: "1px solid #FFFFFF", borderRadius: 4, padding: 12, marginBottom: 16 }}>
           <p style={{ margin: 0 }}> Último examen: <strong>{ultimoExamen.tema}</strong></p>
           <p style={{ margin: 0 }}>Puntaje: <strong>{ultimoExamen.puntaje} / {ultimoExamen.total}</strong></p>
           <small style={{ color: "#666" }}>{new Date(ultimoExamen.fecha).toLocaleDateString("es-MX", { dateStyle: "long" })}</small>

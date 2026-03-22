@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
   try {
     const { tema, cantidad = 5, dificultad = "media" } = await req.json();
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
 
     const prompt = `Genera ${cantidad} preguntas de opción múltiple sobre "${tema}" con dificultad ${dificultad}.
 Responde SOLO con un array JSON, sin explicaciones ni backticks, con este formato exacto:
