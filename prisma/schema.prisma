@@ -1,0 +1,60 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Usuario {
+  id            Int       @id @default(autoincrement())
+  nombre        String
+  email         String    @unique
+  contrasena    String
+  puntaje_total Int       @default(0)
+  intentos      Intento[]
+  examenes      Examen[]
+}
+
+model Pregunta {
+  id         Int         @id @default(autoincrement())
+  tema       String
+  enunciado  String
+  dificultad String
+  respuestas Respuesta[]
+  intentos   Intento[]
+}
+
+model Respuesta {
+  id          Int       @id @default(autoincrement())
+  pregunta_id Int
+  texto       String
+  es_correcta Int       @default(0)
+  pregunta    Pregunta  @relation(fields: [pregunta_id], references: [id])
+  intentos    Intento[]
+}
+
+model Intento {
+  id           Int       @id @default(autoincrement())
+  usuario_id   Int
+  pregunta_id  Int
+  respuesta_id Int
+  examen_id    Int?
+  es_correcto  Int       @default(0)
+  usuario      Usuario   @relation(fields: [usuario_id], references: [id])
+  pregunta     Pregunta  @relation(fields: [pregunta_id], references: [id])
+  respuesta    Respuesta @relation(fields: [respuesta_id], references: [id])
+  examen       Examen?   @relation(fields: [examen_id], references: [id])
+}
+
+model Examen {
+  id         Int       @id @default(autoincrement())
+  usuario_id Int
+  tema       String
+  fecha      DateTime  @default(now())
+  puntaje    Int       @default(0)
+  total      Int
+  usuario    Usuario   @relation(fields: [usuario_id], references: [id])
+  intentos   Intento[]
+}

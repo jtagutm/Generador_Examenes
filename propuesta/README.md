@@ -96,14 +96,50 @@ Gemini devuelve 10 preguntas con 4 opciones cada una, donde solo una es correcta
 ## Pantallas
 
 1. **Inicio de sesión / Registro** — formulario para entrar o crear cuenta
+
+
+
+
     ![Inicio de sesión](IniciarSesion.png)
+
+
+
+
 2. **Inicio** — bienvenida, puntaje del usuario y opción para generar un examen por tema
+
+
+
+
     ![Inicio](Inicio.png)
+
+
+
+
 3. **Examen** — preguntas una por una con sus opciones de respuesta
+
+
+
+
     ![Examen](Examen.png)
+
+
+
+
 4. **Resultado** — puntaje obtenido y resumen del examen
+
+
+
+
     ![Resultado](Resultado.png)
+
+
+
+
 5. **Administración** — CRUD de preguntas y vista de usuarios con puntajes
+
+
+
+
     ![Administración](Admin.png)
 ---
 
