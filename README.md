@@ -121,36 +121,6 @@ Regístrate con el email `yo@yo` para tener acceso al panel de administración.
 
 ## Pruebas
 
-### Pruebas unitarias (Jest)
-
-Verifican lógica interna sin necesidad de servidor ni base de datos.
-
-**Correr:**
-```bash
-npx jest
-```
-
-**Pruebas incluidas:**
-
-`__tests__/auth.test.ts` — Pruebas del sistema JWT:
-- Genera un token string no vacío
-- El token tiene 3 partes separadas por puntos
-- Verifica correctamente un token generado
-- Lanza error con token inválido
-- Lanza error con token vacío
-
-`__tests__/puntaje.test.ts` — Pruebas de lógica de puntaje:
-- Cuenta correctamente las respuestas correctas
-- Retorna 0 si todas son incorrectas
-- Retorna el total si todas son correctas
-- Maneja array vacío
-- Calcula porcentaje correctamente
-- Retorna 100 si todo correcto
-- Retorna 0 si ninguna correcta
-- No divide entre cero
-
----
-
 ### Pruebas E2E (Playwright)
 
 Simulan un usuario real navegando la aplicación en el navegador.
